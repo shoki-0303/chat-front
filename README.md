@@ -8,7 +8,7 @@ application up and running.
 |Column|Type|Options|
 |------|----|-------|
 |content|text|----|
-|image|integer|----|
+|image|text|----|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 
