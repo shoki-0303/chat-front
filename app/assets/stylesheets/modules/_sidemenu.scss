@@ -2,12 +2,12 @@
   box-sizing: border-box;
   height: 100%;
   width: 300px;
-  background-color: #2f3e51;
-  color: #FFF;
+  background-color: $navy;
+  color: $white;
   &__top {
     height: 105px;
     padding: 0 20px;
-    background-color: #253141;
+    background-color: $dark-navy;
     font-size: 1.6rem;
     &__name {
       float: left;
@@ -24,7 +24,7 @@
   }
   &__groups{
     & a { display: block; }
-    & a:hover { background-color: #435469; }
+    & a:hover { background-color: $thin-navy; }
     &__list{
       height: 35px;
       padding: 20px 20px 40px;
@@ -41,5 +41,5 @@
 
 a {
   text-decoration: none;
-  color: #FFF;
+  color: $white;
 }
