@@ -1,0 +1,11 @@
+.sidemenu
+  .sidemenu__top
+    .sidemenu__top__name shoki ohta
+    .sidemenu__top__icons
+      = link_to do
+        %span.fa.fa-edit
+      = link_to do
+        %span.fa.fa-cog
+  %ul.sidemenu__groups
+    = render partial: 'messages/sidebar/group'
+
