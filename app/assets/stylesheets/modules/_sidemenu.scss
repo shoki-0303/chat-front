@@ -1,0 +1,46 @@
+.sidemenu {
+  box-sizing: border-box;
+  height: 100%;
+  width: 300px;
+  background-color: $navy;
+  color: $white;
+  float: left;
+  &__top {
+    height: 105px;
+    padding: 0 20px;
+    background-color: $dark-navy;
+    font-size: 1.6rem;
+    &__name {
+      float: left;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    &__icons {
+      float: right;
+      margin-top: 40px;
+      .fa {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__groups{
+    & a { display: block; }
+    & a:hover { background-color: $thin-navy; }
+    &__list{
+      height: 35px;
+      padding: 20px 20px 40px;
+      &__groupname {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+      }
+      &__latestmessage {
+        font-size: 1.1rem
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
