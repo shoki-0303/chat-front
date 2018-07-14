@@ -1,0 +1,6 @@
+.form
+  %input{:type => "text", :placeholder => "type messages", :class => "form__message"}
+  .icon-label
+    %label.fa.fa-picture-o.upload-label{for: "upload-icon"}
+    %input{:type => "file", :id => "upload-icon", :class => "form__hidden"}
+  %input{:type => "submit", :value => "Send", :class => "form__send"}

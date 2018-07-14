@@ -1,0 +1,32 @@
+.form {
+  padding: 20px 40px;
+  @include clearfix();
+  position: relative;
+  background-color: #80808033;
+  &__message {
+    height: 50px;
+    width: 85%;
+    padding: 0 10px;
+    float: left;
+    font-size: 1.6rem;
+  }
+  .icon-label {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 38%;
+    left: 82%;
+    @include hover();
+    .form__hidden {
+      display: none;
+    }
+  }
+  &__send {
+    float: right;
+    height: 54px;
+    width: 10%;
+    background-color: $sky-blue;
+    color: $white;
+    font-size: 1.6rem;
+    @include hover();
+  }
+}

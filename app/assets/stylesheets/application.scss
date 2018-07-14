@@ -1,6 +1,13 @@
 /*reset.cssを読み込む*/
 @import "reset";
 @import "config/variable";
+@import "flash";
+@import "mixin/clearfix";
+@import "mixin/hover";
 /*sidemenuのcssを読み込む*/
 @import "modules/sidemenu";
+@import "modules/main";
+@import "modules/header";
+@import "modules/content";
+@import "modules/form";
 @import "font-awesome";
