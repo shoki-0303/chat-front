@@ -1,14 +1,10 @@
-.alert {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background-color: $sky-blue;
-  &__message {
-    line-height: 20px;
-    color: $white;
-    text-align: center;
-    font-weight: bold;
+.flash {
+  color: $white;
+  text-align: center;
+  &__alert{
+    background-color: red;
+  }
+  &__notice {
+    background-color: $sky-blue;
   }
 }

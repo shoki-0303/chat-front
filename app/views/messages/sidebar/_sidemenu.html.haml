@@ -1,10 +1,11 @@
 .sidemenu
   .sidemenu__top
-    .sidemenu__top__name shoki ohta
+    .sidemenu__top__name
+      = current_user.name
     .sidemenu__top__icons
       = link_to do
         %span.fa.fa-edit
-      = link_to do
+      = link_to edit_user_path(current_user) do
         %span.fa.fa-cog
   %ul.sidemenu__groups
     = render partial: 'messages/sidebar/group'
