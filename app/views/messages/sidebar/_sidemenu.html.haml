@@ -3,7 +3,7 @@
     .sidemenu__top__name
       = current_user.name
     .sidemenu__top__icons
-      = link_to do
+      = link_to new_group_path do
         %span.fa.fa-edit
       = link_to edit_user_path(current_user) do
         %span.fa.fa-cog
