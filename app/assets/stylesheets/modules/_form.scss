@@ -10,13 +10,13 @@
     float: left;
     font-size: 1.6rem;
   }
-  .icon-label {
+  .form__mask__image {
     font-size: 1.6rem;
     position: absolute;
     top: 38%;
     left: 82%;
     @include hover();
-    .form__hidden {
+    .hidden {
       display: none;
     }
   }

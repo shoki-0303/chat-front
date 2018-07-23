@@ -1,6 +1,14 @@
+/ .form
+/   %input{:type => "text", :placeholder => "type messages", :class => "form__message"}
+/   .icon-label
+/     %label.fa.fa-picture-o.upload-label{for: "upload-icon"}
+/     %input{:type => "file", :id => "upload-icon", :class => "form__hidden"}
+/   %input{:type => "submit", :value => "Send", :class => "form__send"}
 .form
-  %input{:type => "text", :placeholder => "type messages", :class => "form__message"}
-  .icon-label
-    %label.fa.fa-picture-o.upload-label{for: "upload-icon"}
-    %input{:type => "file", :id => "upload-icon", :class => "form__hidden"}
-  %input{:type => "submit", :value => "Send", :class => "form__send"}
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: "form__message", placeholder: "type a message"
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    =f.submit 'Send', class: "form__send"
