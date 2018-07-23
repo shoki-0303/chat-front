@@ -1,12 +1,9 @@
 %ul.content__message
-  %li.content__message__name itati
-  %li.content__message__date 2018/10/10
-  %li.content__message__text こんにちは！
-%ul.content__message
-  %li.content__message__name kisame
-  %li.content__message__date 2018/10/20
-  %li.content__message__text はじめまして!
-%ul.content__message
-  %li.content__message__name kakuzu
-  %li.content__message__date 2018/11/01
-  %li.content__message__text こんばんは！
+  %li.content__message__name
+    = message.user.name
+  %li.content__message__date
+    = message.created_at
+  - if message.content.present?
+    %li.content__message__text
+      = message.content
+  = image_tag message.image.url, class: "content__message__image" if message.image.present?

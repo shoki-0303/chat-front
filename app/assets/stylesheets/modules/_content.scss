@@ -3,6 +3,7 @@
   height: calc(100vh - 241px);
   background-color: #AAAAAA21;
   padding: 46px 40px 0;
+  overflow-y: scroll;
   &__message {
     padding-bottom: 40px;
     &__name {
@@ -19,6 +20,12 @@
     &__text {
       padding-top: 10px;
       font-size: 1.4rem;
+    }
+    &__image {
+      width: 300px;
+      height: 200px;
+      display: block;
+      margin-top: 15px;
     }
   }
 }
