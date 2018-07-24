@@ -5,6 +5,10 @@
   background-color: $navy;
   color: $white;
   float: left;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &__top {
     height: 105px;
     padding: 0 20px;
