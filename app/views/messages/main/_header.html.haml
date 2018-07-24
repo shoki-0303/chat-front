@@ -3,7 +3,7 @@
     = @group.name
   %ul
     %h3.header__member member:
-    %li.header__member__list nagato
-    %li.header__member__list yahiko
-    %li.header__member__list konan
-  = link_to "Edit", "", {:class => "header__edit-link"}
+    %li.header__member__list
+      - @group.users.each do |user|
+        = user.name
+  = link_to "Edit", edit_group_path(@group), {:class => "header__edit-link"}

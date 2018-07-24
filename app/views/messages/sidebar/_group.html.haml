@@ -1,5 +1,5 @@
 - current_user.groups.each do |group|
-  = link_to do
+  = link_to group_messages_path(group) do
     %ul.sidemenu__groups__list
       %li.sidemenu__groups__list__groupname
         = group.name
