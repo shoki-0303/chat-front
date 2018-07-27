@@ -1,11 +1,5 @@
-/ .form
-/   %input{:type => "text", :placeholder => "type messages", :class => "form__message"}
-/   .icon-label
-/     %label.fa.fa-picture-o.upload-label{for: "upload-icon"}
-/     %input{:type => "file", :id => "upload-icon", :class => "form__hidden"}
-/   %input{:type => "submit", :value => "Send", :class => "form__send"}
 .form
-  = form_for [@group, @message] do |f|
+  = form_for [@group, @message], html: {id: 'message__form-js' } do |f|
     = f.text_field :content, class: "form__message", placeholder: "type a message"
     .form__mask
       = f.label :image, class: 'form__mask__image' do
