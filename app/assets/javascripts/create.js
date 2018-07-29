@@ -6,7 +6,7 @@ $(function() {
 
   function appendHTML(json) {
     var image_url = (json.image_url) ? `<img src=${json.image_url} class="content__message__image" >` : "";
-    var html =`<ul class="content__message">
+    var html =`<ul class="content__message" data-id=${json.id}>
     <li class="content__message__name">
     ${ json.user_name }
     </li>
@@ -43,4 +43,27 @@ $(function() {
       alert('非同期通信に失敗しました');
     })
   });
+
+  $(function() {
+    setInterval(update, 5000);
+  });
+
+  function update() {
+    if (location.pathname.match(/\/groups\/\d+\/messages/)) {
+      $.ajax({
+        url: location.href,
+        type: 'GET',
+        dataType: 'json'
+      })
+      .done(function(messages) {
+        var lastMessageId = $('.content__message:last').data("id")
+        messages.forEach(function(message) {
+          if (message.id > lastMessageId) {
+            appendHTML(message);
+            scroll();
+          }
+        })
+      })
+    }
+  }
 });
